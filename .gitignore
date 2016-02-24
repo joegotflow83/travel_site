@@ -1,0 +1,4 @@
+.DS_Store
+travel_env/
+italy/.DS_Store
+italy/db.sqlite3
