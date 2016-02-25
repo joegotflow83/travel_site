@@ -10,19 +10,15 @@ class IndexView(TemplateView):
 	template_name = 'main/index.html'
 
 
-class AboutView(TemplateView):
+class AboutView(CreateView):
 
 
-	template_name = 'main/about.html'
+	template_name ='main/about.html'
+	model = Contact
+	fields = ['first_name', 'last_name', 'email']
+	success_url = '/'
 
-
-class ContactCreate(CreateView):
-   
-
-    model = Contact
-    fields = ['first_name', 'last_name', 'email']
-    success_url = '/'
-
-    def form_valid(self, form):
-        form.instance.created_by = self.request.user
-        return super().form_valid(form)
+	def form_valid(self, form):
+	    form.instance.created_by = self.request.user
+	    return super().form_valid(form)
+    

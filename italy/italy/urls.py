@@ -17,11 +17,12 @@ from django.conf.urls import url
 from django.contrib import admin
 
 from main import views
+from content import views as v
 
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^$', views.IndexView.as_view(), name='index'),
 	url(r'^about/$', views.AboutView.as_view(), name='about'),
-	url(r'^contact/$', views.ContactCreate.as_view(), name='contact'),
+    url(r'^cities/', v.Top6.as_view(), name='cities'),
 ]

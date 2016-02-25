@@ -1,2 +1,0 @@
-Django==1.9.2
-django-forms-bootstrap==3.0.1

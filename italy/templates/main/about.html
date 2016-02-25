@@ -1,9 +1,48 @@
 {% extends 'base.html' %}
-
+{% load bootstrap_tags %}
+{% load staticfiles %}
 {% block title %}About Me{% endblock title %}
+{% block extracss %}
+<style>
+	.jumbotron {
+		background: url({% static 'img/italy2.jpg' %}) no-repeat center center fixed; 
+	  	-webkit-background-size: cover;
+	  	-moz-background-size: cover;
+	  	-o-background-size: cover;
+	  	background-size: cover;
+	}
+
+	.white-text {
+		color: white;
+	}
+
+	#text {
+		padding-top: 20px;
+	}
+</style>
+{% endblock %}
 
 {% block content %}
-
-<p>data</p>
-
+<div class="jumbotron white-text text-center">
+	<br>
+	<br>
+	<h1>About Me</h1>
+	<br>
+	<br>
+	<br>
+</div>
+<div class="container">
+	<div class="col-md-6" id="text">
+		<p>My name is Joseph Moran and I have been traveling the world for over 10 years now and have so much to offer to you as a person who is interested in traveling the world! Let me help you embark on that journey by starting off in Italy! You can travel to any city your interested in or all of them! My history in Italy is deep as I have a deep passion for Ancient Rome and the power it used to be in the Ancient World. Explore all the ruins that Rome has to offer, the exotic wines homegrown in the land of Naples, look at some incredible art in Florence watch some great football from the club football team AC Milan in Milan, See the beautiful city of Venice, or enjoy the tourism atmosphere of Turin. Wherever you may choose, embark on a journey that will last a life time and never forget! There is nothing in the world like traveling it!</p>
+	</div>
+	<div class="col-md-4">
+		<h2>Sign Up To Join Our Newsletters</h2>
+		<form method="post" action="/about/">
+			{% csrf_token %}
+			{{ form | as_bootstrap }}
+			<input type="submit" value="Join Our Newsletter!" class="btn btn-success">
+		</form>
+		<br>
+	</div>
+</div>
 {% endblock %}

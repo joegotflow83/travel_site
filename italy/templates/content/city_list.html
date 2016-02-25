@@ -1,0 +1,249 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+{% block title %}Cities{% endblock title %}
+
+{% block extracss %}
+<style>
+	#rome {
+		background: url({% static 'img/rome.jpg' %}) no-repeat center center fixed; 
+	  	-webkit-background-size: cover;
+	  	-moz-background-size: cover;
+	  	-o-background-size: cover;
+	  	background-size: cover;
+	}
+
+	#florence {
+		background: url({% static 'img/florence.jpg' %}) no-repeat center center fixed; 
+	  	-webkit-background-size: cover;
+	  	-moz-background-size: cover;
+	  	-o-background-size: cover;
+	  	background-size: cover;
+	}
+
+	#venice {
+		background: url(https://pixabay.com/static/uploads/photo/2015/11/07/11/40/venice-1031386_960_720.jpg) no-repeat center center fixed; 
+	  	-webkit-background-size: cover;
+	  	-moz-background-size: cover;
+	  	-o-background-size: cover;
+	  	background-size: cover;
+	}
+
+	#naples {
+		background: url({% static 'img/naples.jpg' %}) no-repeat center center fixed; 
+	  	-webkit-background-size: cover;
+	  	-moz-background-size: cover;
+	  	-o-background-size: cover;
+	  	background-size: cover;
+	}
+
+	#milan {
+		background: url({% static 'img/milan.jpg' %}) no-repeat center center fixed; 
+	  	-webkit-background-size: cover;
+	  	-moz-background-size: cover;
+	  	-o-background-size: cover;
+	  	background-size: cover;
+	}
+
+	#turin {
+		background: url({% static 'img/turin.jpg' %}) no-repeat center center fixed; 
+	  	-webkit-background-size: cover;
+	  	-moz-background-size: cover;
+	  	-o-background-size: cover;
+	  	background-size: cover;
+	}
+
+	.white-text {
+		color: white;
+	}
+</style>
+{% endblock %}
+
+{% block content %}
+<div class="jumbotron white-text text-center" id="rome">
+	<br>
+	<br>
+	<h1>Rome</h1>
+	<br>
+	<br>
+	<br>
+	<br>
+</div>
+<div class="container">
+	<div class="col-md-6">
+		<br>
+		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+		<br>
+		<br>
+	</div>
+	<div class="col-md-6">
+		<table class="table table-striped">
+			<tr>
+				<th>City</th>
+				<th>Population</th>
+				<th>Fun Fact</th>
+			</tr>
+			<tr>
+				<td>{{ rome.name }}</td>
+				<td>{{ rome.population }}</td>
+				<td>{{ rome.fun_fact }}</td>
+			</tr>
+		</table>
+	</div>
+</div>
+
+<div class="jumbotron white-text text-center" id="florence">
+	<br>
+	<br>
+	<h1>Florence</h1>
+	<br>
+	<br>
+	<br>
+	<br>
+</div>
+<div class="container">
+	<div class="col-md-6">
+		<table class="table table-striped">
+			<tr>
+				<th>City</th>
+				<th>Population</th>
+				<th>Fun Fact</th>
+			</tr>
+			<tr>
+				<td>{{ florence.name }}</td>
+				<td>{{ florence.population }}</td>
+				<td>{{ florence.fun_fact }}</td>
+			</tr>
+		</table>
+	</div>
+	<div class="col-md-6">
+	<br>
+		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+		<br>
+		<br>
+	</div>
+</div>
+<div class="jumbotron white-text text-center" id="venice">
+	<br>
+	<br>
+	<h1>Venice</h1>
+	<br>
+	<br>
+	<br>
+	<br>
+</div>
+<div class="container">
+	<div class="col-md-6">
+		<br>
+		<p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."</p>
+		<br>
+		<br>
+	</div>
+	<div class="col-md-6">
+		<table class="table table-striped">
+			<tr>
+				<th>City</th>
+				<th>Population</th>
+				<th>Fun Fact</th>
+			</tr>
+			<tr>
+				<td>{{ venice.name }}</td>
+				<td>{{ venice.population }}</td>
+				<td>{{ venice.fun_fact }}</td>
+			</tr>
+		</table>
+	</div>
+</div>
+<div class="jumbotron white-text text-center" id="naples">
+	<br>
+	<br>
+	<h1>Naples</h1>
+	<br>
+	<br>
+	<br>
+	<br>
+</div>
+<div class="container">
+	<div class="col-md-6">
+		<table class="table table-striped">
+			<tr>
+				<th>City</th>
+				<th>Population</th>
+				<th>Fun Fact</th>
+			</tr>
+			<tr>
+				<td>{{ naples.name }}</td>
+				<td>{{ naples.population }}</td>
+				<td>{{ naples.fun_fact }}</td>
+			</tr>
+		</table>
+	</div>
+	<div class="col-md-6">
+		<br>
+		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+		<br>
+		<br>
+	</div>
+</div>
+<div class="jumbotron white-text text-center" id="milan">
+	<br>
+	<br>
+	<h1>Milan</h1>
+	<br>
+	<br>
+	<br>
+	<br>
+</div>
+<div class="container">
+	<div class="col-md-6">
+		<br>
+		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+		<br>
+		<br>
+	</div>
+	<div class="col-md-6">
+		<table class="table table-striped">
+			<tr>
+				<th>City</th>
+				<th>Population</th>
+				<th>Fun Fact</th>
+			</tr>
+			<tr>
+				<td>{{ milan.name }}</td>
+				<td>{{ milan.population }}</td>
+				<td>{{ milan.fun_fact }}</td>
+			</tr>
+		</table>
+	</div>
+</div>
+<div class="jumbotron white-text text-center" id="turin">
+	<br>
+	<br>
+	<h1>Turin</h1>
+	<br>
+	<br>
+	<br>
+	<br>
+</div>
+<div class="container">
+	<div class="col-md-6">
+		<br>
+		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+		<br>
+		<br>
+	</div>
+	<div class="col-md-6">
+		<table class="table table-striped">
+			<tr>
+				<th>City</th>
+				<th>Population</th>
+				<th>Fun Fact</th>
+			</tr>
+			<tr>
+				<td>{{ turin.name }}</td>
+				<td>{{ turin.population }}</td>
+				<td>{{ turin.fun_fact }}</td>
+			</tr>
+		</table>
+	</div>
+</div>
+{% endblock %}
